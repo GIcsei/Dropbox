@@ -3,6 +3,7 @@ import engine.Character;
 import engine.DataHandler;
 import javafx.animation.*;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
@@ -111,7 +112,7 @@ public class GUI {
         grid.add(hbcharLoad, 3, 2);
         try {
             charLoad.setOnAction(e -> {
-                CharInfo(primaryStage, load.Loader());});
+                CharInfo(primaryStage, setup.Loader());});
         }
         catch (Exception e){
             e.printStackTrace();
@@ -150,10 +151,15 @@ public class GUI {
         version.setText("Version number: "+load.versionNumber());
         grid.add(version, 0,6);
         grid.setGridLinesVisible(false);
+        grid.setMinSize(1366, 768);
         Scene scene = new Scene(grid, Screen.getPrimary().getVisualBounds().getWidth()/2, Screen.getPrimary().getVisualBounds().getHeight()/2);
         primaryStage.setResizable(true);
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.setOnCloseRequest(e->{
+            Platform.exit();
+            System.exit(0);
+        });
 
     }
 
@@ -250,9 +256,14 @@ public class GUI {
         catch (Exception e){
             e.printStackTrace();
         }
+        grid.setMinSize(1366, 768);
         Scene scene = new Scene(grid, Screen.getPrimary().getVisualBounds().getWidth()/2, Screen.getPrimary().getVisualBounds().getHeight()/2);
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.setOnCloseRequest(e->{
+            Platform.exit();
+            System.exit(0);
+        });
     }
 
     /**
@@ -270,8 +281,8 @@ public class GUI {
         grid.setHgap(10);
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 0));
-        BackgroundImage myBI = new BackgroundImage(new Image("file:///c:\\LOTR\\pictures\\logo.jpg", 1920, 1080, false, true),
-                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, true, true, true, true));
+        BackgroundImage myBI = new BackgroundImage(new Image("file:///c:\\LOTR\\pictures\\logo.jpg", 1366, 768, false, true),
+                BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, true, true, true, false));
         grid.setBackground(new Background(myBI));
         //0
         column.setPercentWidth(10);
@@ -529,11 +540,15 @@ public class GUI {
         });
         String path="file:///c:\\LOTR\\pictures\\"+data.get(1)+".jpg";
         HBox image=new HBox(new ImageView(new Image(path,350,450,false,false)));
+        grid.setMinSize(1366, 768);
         grid.add(image,1,3, 1,9);
         Scene scene = new Scene(grid, Screen.getPrimary().getVisualBounds().getWidth()/2, Screen.getPrimary().getVisualBounds().getHeight()/2);
         primaryStage.setScene(scene);
         primaryStage.show();
-
+        primaryStage.setOnCloseRequest(e->{
+            Platform.exit();
+            System.exit(0);
+        });
     }
 
     /**
@@ -773,9 +788,14 @@ public class GUI {
         hbCreate.getChildren().add(create);
         grid.add(hbCreate, 4, 7);
         create.setOnAction(e-> menu(primaryStage));
+        grid.setMinSize(1366, 768);
         Scene scene = new Scene(grid, Screen.getPrimary().getVisualBounds().getWidth()/2, Screen.getPrimary().getVisualBounds().getHeight()/2);
         primaryStage.setScene(scene);
         primaryStage.show();
+        primaryStage.setOnCloseRequest(e->{
+            Platform.exit();
+            System.exit(0);
+        });
     }
 
     /**
@@ -865,4 +885,6 @@ public class GUI {
         blink.setCycleCount(3);
         return blink;
     }
+
+
 }

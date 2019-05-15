@@ -37,7 +37,7 @@ public class Character implements  java.io.Serializable{
             return Classes;
         }
     }
-    public enum Races{Human("Human"), Elf("Elf"), Dwarf("Dwarf"), Gnome("Gnome"), Goblin("Goblin"), Dark_Elf("Dark_elf"), Orc("Orc"), Demon("Demon");
+    public enum Races{Human("Human"), Elf("Elf"), Dwarf("Dwarf"), Gnome("Gnome"), Goblin("Goblin"), Dark_Elf("Dark_Elf"), Orc("Orc"), Demon("Demon");
         private final String Races;
         Races(String s) {
             Races = s;

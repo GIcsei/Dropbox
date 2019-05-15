@@ -30,7 +30,7 @@ public class DataHandler {
         properties.setProperty(MY_KEY, (new String().valueOf(id)));
         properties.setProperty(MY_KEY2, "1.0");
 
-        File file = new File("c:\\LOTR\\lastUsedCharacter.xml");
+        File file = new File("lastUsedCharacter.xml");
         Path p= Paths.get(String.valueOf(file));
         OutputStream fileOut = new BufferedOutputStream(Files.newOutputStream(p, CREATE, WRITE));
         properties.storeToXML(fileOut, "Utoljára kimentett karakter Id-ja");
@@ -62,7 +62,7 @@ public class DataHandler {
 
 public int Loader(){
     try {
-        File file = new File("c:\\LOTR\\lastUsedCharacter.xml");
+        File file = new File("lastUsedCharacter.xml");
         FileInputStream fileInput = new FileInputStream(file);
         Properties properties = new Properties();
         properties.loadFromXML(fileInput);

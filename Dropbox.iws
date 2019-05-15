@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819937f2-456d-4a83-ba34-458f6366e4d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Dropbox.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/Dropbox.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lastUsedCharacter.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dropbox.iws" beforeDir="false" afterPath="$PROJECT_DIR$/Dropbox.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/ModifyDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/ModifyDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/DataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/DataHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Dropbox.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/ModifyDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/ModifyDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/engine/DataHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/engine/DataHandler.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/database/ModifyDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2618">
-              <caret line="159" column="2" selection-start-line="159" selection-start-column="2" selection-end-line="159" selection-end-column="2" />
+            <state relative-caret-position="237">
+              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/engine/Character.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="96" selection-end-column="10" />
+            <state relative-caret-position="492">
+              <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -51,28 +52,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="140" column="47" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
+            <state relative-caret-position="237">
+              <caret line="518" column="19" selection-start-line="518" selection-start-column="19" selection-end-line="518" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;field#maxPoints#0;class#GUI#0" />
+                <element signature="docComment;method#menu#0;class#GUI#0" />
+                <element signature="method#menu#0;class#GUI#0" />
                 <element signature="method#generateCharacter#0;class#GUI#0" />
                 <element signature="docComment;method#details#0;class#GUI#0" />
-                <element signature="method#details#0;class#GUI#0" />
+                <element signature="method#chooseCharacter#0;class#GUI#0" />
+                <element signature="method#createBlinker#0;class#GUI#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="150" selection-start-line="150" selection-end-line="150" />
+            <state relative-caret-position="288">
+              <caret line="150" selection-start-line="150" selection-end-line="161" selection-end-column="29" />
               <folding>
-                <element signature="method#Main#0;class#Main#0" />
-                <element signature="docComment;method#downloadFile#0;class#Main#0" />
-                <element signature="docComment;method#start#0;class#Main#0" />
+                <element signature="e#4488#4663#0" expanded="true" />
+                <element signature="e#4662#4663#0" expanded="true" />
+                <element signature="e#6776#6777#0" expanded="true" />
+                <element signature="e#6804#6805#0" expanded="true" />
+                <element signature="e#6837#7282#0" expanded="true" />
+                <element signature="e#7281#7282#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ProgressOutputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -80,8 +96,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/engine/DataHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
+            <state relative-caret-position="765">
+              <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+              <folding>
+                <element signature="e#1463#2000#0" />
+                <element signature="n#!!doc;n#versionNumber#0;n#DataHandler#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,13 +122,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ProgressOutputStream.java" />
         <option value="$PROJECT_DIR$/src/main/java/dropbox/Dropbox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/engine/DataHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/engine/Character.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/ModifyDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/engine/DataHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SimpleAudioPlayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProgressOutputStream.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dropbox.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/engine/Character.java" />
       </list>
     </option>
   </component>
@@ -131,10 +153,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="x" value="-12" />
+    <option name="width" value="1941" />
+    <option name="height" value="2112" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -142,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,6 +209,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,10 +269,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2632375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26560637" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -259,16 +280,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4074074" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40685892" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4925955" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3281372" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32850242" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3188406" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3187841" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -279,6 +300,28 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/GUI.java</url>
+          <line>172</line>
+          <properties class="GUI" method="generateCharacter">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/GUI.java</url>
+          <line>55</line>
+          <properties class="GUI" method="menu">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -288,18 +331,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dropbox/Dropbox.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProgressOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
@@ -335,52 +366,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/ModifyDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="159" column="2" selection-start-line="159" selection-start-column="2" selection-end-line="159" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://D:/Letöltések/io/io/TextInputOutput.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/engine/Character.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SimpleAudioPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="91" column="29" selection-start-line="91" selection-start-column="29" selection-end-line="96" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="140" column="47" selection-start-line="140" selection-start-column="47" selection-end-line="140" selection-end-column="47" />
+        <state relative-caret-position="135">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
           <folding>
+            <element signature="e#0#1388#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#generateCharacter#0;class#GUI#0" />
-            <element signature="docComment;method#details#0;class#GUI#0" />
-            <element signature="method#details#0;class#GUI#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/engine/DataHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
+        <state relative-caret-position="765">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+          <folding>
+            <element signature="e#1463#2000#0" />
+            <element signature="n#!!doc;n#versionNumber#0;n#DataHandler#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/engine/Dropbox.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dropbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="87" column="5" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="87" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ProgressOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
+        <state relative-caret-position="288">
+          <caret line="150" selection-start-line="150" selection-end-line="161" selection-end-column="29" />
           <folding>
-            <element signature="method#Main#0;class#Main#0" />
-            <element signature="docComment;method#downloadFile#0;class#Main#0" />
-            <element signature="docComment;method#start#0;class#Main#0" />
+            <element signature="e#4488#4663#0" expanded="true" />
+            <element signature="e#4662#4663#0" expanded="true" />
+            <element signature="e#6776#6777#0" expanded="true" />
+            <element signature="e#6804#6805#0" expanded="true" />
+            <element signature="e#6837#7282#0" expanded="true" />
+            <element signature="e#7281#7282#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/ModifyDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="518" column="19" selection-start-line="518" selection-start-column="19" selection-end-line="518" selection-end-column="19" />
+          <folding>
+            <element signature="docComment;field#maxPoints#0;class#GUI#0" />
+            <element signature="docComment;method#menu#0;class#GUI#0" />
+            <element signature="method#menu#0;class#GUI#0" />
+            <element signature="method#generateCharacter#0;class#GUI#0" />
+            <element signature="docComment;method#details#0;class#GUI#0" />
+            <element signature="method#chooseCharacter#0;class#GUI#0" />
+            <element signature="method#createBlinker#0;class#GUI#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/engine/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
         </state>
       </provider>
     </entry>
