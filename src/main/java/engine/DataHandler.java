@@ -27,7 +27,7 @@ public class DataHandler {
     public void Saver(int id) {
     		try{
         Properties properties = new Properties();
-        properties.setProperty(MY_KEY, (new String().valueOf(id)));
+        properties.setProperty(MY_KEY, (String.valueOf(id)));
         properties.setProperty(MY_KEY2, "1.0");
 
         File file = new File("lastUsedCharacter.xml");

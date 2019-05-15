@@ -637,7 +637,7 @@ public class GUI {
                     }
                     Character index=(Character)tRow.getItem();
                     int id=(index.getId());
-                    System.out.println(String.valueOf(id));
+                    System.out.println(id);
                     setup.Saver(id);
                     secondaryStage.close();
                 }
