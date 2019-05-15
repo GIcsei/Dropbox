@@ -557,34 +557,34 @@ public class GUI {
         IdCol.setCellValueFactory(new PropertyValueFactory<Character, String>("id"));
         TableColumn NameCol = new TableColumn("Karakter neve");
         NameCol.setCellValueFactory(new PropertyValueFactory<Character, String>("name"));
-        NameCol.setMinWidth(137);
+        NameCol.setMinWidth(50);
         TableColumn RaceCol = new TableColumn("Faj");
         RaceCol.setCellValueFactory(new PropertyValueFactory<Character, String>("race"));
-        RaceCol.setMinWidth(137);
+        RaceCol.setMinWidth(50);
         TableColumn ClassCol = new TableColumn("Osztály");
         ClassCol.setCellValueFactory(new PropertyValueFactory<Character, String>("characterClass"));
-        ClassCol.setMinWidth(137);
+        ClassCol.setMinWidth(50);
         TableColumn StrCol = new TableColumn("Erő");
         StrCol.setCellValueFactory(new PropertyValueFactory<Character, Integer>("strength"));
-        StrCol.setMinWidth(137);
+        StrCol.setMinWidth(50);
         TableColumn DexCol = new TableColumn("Ügyesség");
         DexCol.setCellValueFactory(new PropertyValueFactory<Character, Integer>("dexterity"));
-        DexCol.setMinWidth(137);
+        DexCol.setMinWidth(50);
         TableColumn IntCol = new TableColumn("Intelligencia");
         IntCol.setCellValueFactory(new PropertyValueFactory<Character, Integer>("intelligence"));
-        IntCol.setMinWidth(137);
+        IntCol.setMinWidth(50);
         TableColumn ConCol = new TableColumn("Kitartás");
         ConCol.setCellValueFactory(new PropertyValueFactory<Character, Integer>("constitution"));
-        ConCol.setMinWidth(137);
+        ConCol.setMinWidth(50);
         TableColumn LckCol = new TableColumn("Szerencse");
         LckCol.setCellValueFactory(new PropertyValueFactory<Character, Integer>("luck"));
-        LckCol.setMinWidth(137);
+        LckCol.setMinWidth(50);
         TableColumn ExpCol = new TableColumn("Tapasztalat");
         ExpCol.setCellValueFactory(new PropertyValueFactory<Character, Integer>("experiencePoints"));
-        ExpCol.setMinWidth(137);
+        ExpCol.setMinWidth(50);
         TableColumn LevCol = new TableColumn("Aktuális Szint");
         LevCol.setCellValueFactory(new PropertyValueFactory<Character, Integer>("level"));
-        LevCol.setMinWidth(137);
+        LevCol.setMinWidth(50);
         ModifyDatabase list =new ModifyDatabase();
         final ArrayList<Character> characters=list.getCharacters();
         final VBox vbox = new VBox();
@@ -598,7 +598,7 @@ public class GUI {
 
         table.setItems(data);
         table.setEditable(false);
-        table.getColumns().addAll(NameCol,LevCol,ClassCol,RaceCol,StrCol,DexCol,IntCol,ConCol,LckCol,ExpCol);
+        table.getColumns().addAll(IdCol, NameCol,LevCol,ClassCol,RaceCol,StrCol,DexCol,IntCol,ConCol,LckCol,ExpCol);
         table.setBackground(new Background(myBI));
 
         ((Group) scene.getRoot()).getChildren().addAll(vbox);
@@ -621,7 +621,7 @@ public class GUI {
                         tRow = (TableRow) node.getParent();
                     }
                     Character index=(Character)tRow.getItem();
-                    int id=list.getCharId(index.getName());
+                    int id=(index.getId());
                     System.out.println(String.valueOf(id));
                     setup.Saver(id);
                     secondaryStage.close();

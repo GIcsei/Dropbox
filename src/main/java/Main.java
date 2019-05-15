@@ -1,4 +1,6 @@
 import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -23,8 +25,12 @@ import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import org.w3c.dom.Document;
+import sun.rmi.runtime.Log;
 
 import javax.swing.*;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import static java.awt.SystemColor.menu;
 import static java.nio.file.StandardOpenOption.*;
@@ -36,6 +42,15 @@ public class Main extends Application {
     private static final String ACCESS_TOKEN = "IBUXhmVxy8AAAAAAAAAAKIezQFOh47lt7r7zMYFDcq_TUyamC0oGSpPrp_mFHlMl";
     private DbxRequestConfig config = null;
     DbxClientV2 client = null;
+    private static URL xmlUrl;
+
+    {
+        try {
+            xmlUrl = new URL("http://dl.dropbox.com/s/quxhr6agmffm1x8/lastUsedCharacter.xml?dl=1");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public Main()
     {
@@ -57,8 +72,11 @@ public class Main extends Application {
     {
         // Upload "test.txt" to Dropbox
         try {
-            InputStream in = new FileInputStream(path);
-            FileMetadata metadata = client.files().uploadBuilder(foldername).uploadAndFinish(in);
+            //File file=new File(path);
+            //Path p = Paths.get(String.valueOf(file));
+            //InputStream in = new BufferedInputStream(Files.newInputStream(p, READ));
+            InputStream in2 = new FileInputStream(path);
+            FileMetadata metadata = client.files().uploadBuilder(foldername).withMode(WriteMode.OVERWRITE).uploadAndFinish(in2);
         }
         catch (FileNotFoundException fne)
         {
@@ -104,22 +122,37 @@ public class Main extends Application {
     }
 
     private static boolean synchronize(Main m) {
-        String folderName = "";
         try {
+            File file=new File ("C:\\LOTR\\");
+            file.mkdir();
             m.downloadFile("/lotr.mp3","C:\\LOTR\\");
-            m.downloadFile("/lastUsedCharacter.properties","C:\\LOTR\\");
+            //m.downloadFile("/lastUsedCharacter.xml","C:\\LOTR\\");
+            downloadXml();
             m.downloadFile("/races.db","C:\\LOTR\\");
             m.downloadFile("/pictures/logo.jpg","C:\\LOTR\\");
             m.downloadFile("/pictures/mage.jpg","C:\\LOTR\\");
             m.downloadFile("/pictures/scout.jpg","C:\\LOTR\\");
             m.downloadFile("/pictures/warrior.jpg","C:\\LOTR\\");
             m.downloadFile("/pictures/sauron.gif","C:\\LOTR\\");
-            //m.uploadFile("C:/b2b/Overview of Archival and Purge Process.pdf", folderName + "/Overview of Archival and Purge Process.pdf");
-        } catch (Exception e) {
+            } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
         return true;
+    }
+
+    private static void downloadXml() {
+        try {
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = dbf.newDocumentBuilder();
+
+            URL url = new URL(xmlUrl.toString());
+            InputStream stream = url.openStream();
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -136,12 +169,29 @@ public class Main extends Application {
                 primaryStage.getIcons().add(new Image("file:///c:\\LOTR\\pictures\\logo.jpg"));
                 music();
                 gui.menu(primaryStage);
+                primaryStage.setOnHiding(event->uploadFiles(m));
             } catch (Exception e){
                 e.printStackTrace();
             }
-            music();
+            final Task playMusic = new Task() {
+                @Override
+                protected Object call(){
+                    Media media = new Media(new File("file:///c:\\LOTR\\lotr.mp3").toURI().toString());
+                    MediaPlayer mediaPlayer;
+                    mediaPlayer = new MediaPlayer(media);
+                    mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+                    mediaPlayer.play();
+                    return null;
+                }
+            };
+            Thread thread = new Thread(playMusic);
+            thread.start();
         }
+}
 
+    private void uploadFiles(Main m) {
+        m.uploadFile("C:/LOTR/races.db", "/races.db");
+        m.uploadFile("C:/LOTR/lastUsedCharacter.xml", "/lastUsedCharacter.xml");
     }
 
     public static void main(String args[]){
@@ -163,5 +213,12 @@ public class Main extends Application {
         Thread thread = new Thread(playMusic);
         thread.start();
     }
+
+
+
+    //TODO mivan a zenével?
+    //TODO feltöltés
+    //TODO szálkiosztás, grafikus felület
+    //TODO fájltörlés kilépéskor
 }
 

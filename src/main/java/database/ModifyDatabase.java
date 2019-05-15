@@ -128,7 +128,7 @@ public class ModifyDatabase {
      * @param name
      * @return
      */
-    public int getCharId(String name){
+   /* public int getCharId(String name){
         int characterId=0;
         name.replace(name, "%"+name+"%");
         String connectionString = "jdbc:sqlite:file:///c:\\LOTR\\races.db";
@@ -157,7 +157,7 @@ public class ModifyDatabase {
         System.out.println("Gáz van!");
         return characterId;
     }
-
+*/
     /**
      * A módosítok hatására kialakult végső pontszámokat számolja ki
      * Segédfüggvény
